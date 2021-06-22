@@ -136,7 +136,7 @@
                                         </h3>
                                     </div>
                                     <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
-                                    <button type="submit" class=".cho-container" formmethod="post">Pagar con mercado pago</button>
+                                    <button type="submit" id=".cho-container" class=".cho-container" formmethod="post">Pagar con mercado pago</button>
 
                                 </div>
                             </div>
