@@ -136,7 +136,7 @@
                                         </h3>
                                     </div>
                                     <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
-                                    <div id=".cho-container"></div>
+                                    <div id="cho-container"></div>
 
                                 </div>
                             </div>
@@ -165,10 +165,10 @@
             // Inicializa el checkout
             mp.checkout({
                 preference: {
-                    id: '1234'
+                    id: 1234
                 },
                 render: {
-                    container: '.cho-container', // Indica dónde se mostrará el botón de pago
+                    container: 'cho-container', // Indica dónde se mostrará el botón de pago
                     label: 'Pagar con Mercado Pago', // Cambia el texto del botón de pago (opcional)
                 }
             });
