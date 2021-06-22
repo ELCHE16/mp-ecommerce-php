@@ -158,7 +158,7 @@
     // SDK de Mercado Pago
     require __DIR__ .  '/vendor/autoload.php';
     // Agrega credenciales
-    MercadoPago\SDK::setAccessToken('TEST-12a5b929-652e-459e-bb96-2675efb8982b');
+    MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398');
 
     // Crea un objeto de preferencia
     $preference = new MercadoPago\Preference();
@@ -174,9 +174,18 @@
     $preference->items = array($item);
 
     $preference->back_urls = array(
-        "success" => "https://elche16-mp-commerce-php.herokuapp.com/success",
-        "failure" => "https://elche16-mp-commerce-php.herokuapp.com/failure",
-        "pending" => "https://elche16-mp-commerce-php.herokuapp.com/pending"
+        "success" => "https://elche16-mp-commerce-php.herokuapp.com/success.php?collection_id=[PAYMENT_ID]&collection_status=approved&external_refe
+        rence=[EXTERNAL_REFERENCE]&payment_type=credit_card&preference_id='1234'&site_id=[
+        SITE_ID]&processing_mode=aggregator&merchant_account_id=null",
+        "failure" => "https://elche16-mp-commerce-php.herokuapp.com/failure.php?collection_id=[PAYMENT_ID]&collection_status=approved&external_refe
+        rence=[EXTERNAL_REFERENCE]&payment_type=credit_card&preference_id='1234'&site_id=[
+        SITE_ID]&processing_mode=aggregator&merchant_account_id=null",
+        "pending" => "https://elche16-mp-commerce-php.herokuapp.com/pending.php?collection_id=[PAYMENT_ID]&collection_status=approved&external_refe
+        rence=[EXTERNAL_REFERENCE]&payment_type=credit_card&preference_id='1234'&site_id=[
+        SITE_ID]&processing_mode=aggregator&merchant_account_id=null",
+        "ticket" => "https://elche16-mp-commerce-php.herokuapp.com/ticket.php?collection_id=[PAYMENT_ID]&collection_status=approved&external_refe
+        rence=[EXTERNAL_REFERENCE]&payment_type=credit_card&preference_id='1234'&site_id=[
+        SITE_ID]&processing_mode=aggregator&merchant_account_id=null"
     );
     $preference->auto_return = "approved";
 
@@ -186,7 +195,7 @@
 ?>
 <script>
 // Agrega credenciales de SDK
-  const mp = new MercadoPago('PUBLIC_KEY', {
+  const mp = new MercadoPago('APP_USR-7eb0138a-189f-4bec-87d1-c0504ead5626', {
         locale: 'es-AR'
   });
 
