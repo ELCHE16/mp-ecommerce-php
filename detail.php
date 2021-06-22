@@ -135,7 +135,7 @@
                                         </h3>
                                     </div>
                                     <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
-                                    <button type="submit" class=".cho-container" formmethod="post"></button>
+                                    <button type="submit" class=".cho-container" formmethod="post">Pagar con mercado pago</button>
 
                                 </div>
                             </div>
@@ -158,7 +158,7 @@
     // SDK de Mercado Pago
     require __DIR__ .  '/vendor/autoload.php';
     // Agrega credenciales
-    MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398');
+    MercadoPago\SDK::setAccessToken('TEST-12a5b929-652e-459e-bb96-2675efb8982b');
 
     // Crea un objeto de preferencia
     $preference = new MercadoPago\Preference();
